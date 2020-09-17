@@ -1,0 +1,22 @@
+gcc -pthread cleanup.c
+
+./a.out
+New thread started
+cnt = 0
+cnt = 1
+Canceling thread
+Called clean-up handler
+Thread was canceled; cnt = 0
+
+./a.out x
+New thread started
+cnt = 0
+cnt = 1
+Thread terminated normally; cnt = 2
+./a.out x 1
+
+New thread started
+cnt = 0
+cnt = 1
+Called clean-up handler
+Thread terminated normally; cnt = 0
